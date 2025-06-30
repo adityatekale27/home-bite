@@ -1,0 +1,289 @@
+@import "tailwindcss";
+/* Global font import (can also be in public/index.html <head>) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  /* Lighter background */
+}
+
+/* Custom scrollbar for table */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  /* Light gray track */
+  border-radius: 10px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  /* Medium gray thumb */
+  border-radius: 10px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+  /* Darker gray on hover */
+}
+
+/* Custom styles for card hover effect */
+.card-hover-effect {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Custom styles for status badges */
+.status-badge {
+  padding: 0.35rem 0.9rem;
+  /* Slightly larger padding */
+  border-radius: 9999px;
+  /* Full rounded */
+  font-weight: 600;
+  font-size: 0.75rem;
+  /* text-xs */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  /* Increased gap */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow */
+}
+
+.status-available {
+  background-color: #ecfdf5;
+  /* green-50 light */
+  color: #065f46;
+  /* green-800 */
+  border: 1px solid #34d399;
+  /* green-400 */
+}
+
+.status-sold-out {
+  background-color: #fffbeb;
+  /* yellow-50 light */
+  color: #b45309;
+  /* yellow-800 */
+  border: 1px solid #fcd34d;
+  /* yellow-300 */
+}
+
+.status-hot-selling {
+  background-color: #fee2e2;
+  /* red-50 light */
+  color: #dc2626;
+  /* red-600 */
+  border: 1px solid #fca5a5;
+  /* red-300 */
+}
+
+/* Custom button styles for better hover/active states */
+.btn-primary {
+  background-color: #10b981;
+  /* green-500 */
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  /* green-600 */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(5, 150, 105, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(16, 185, 129, 0.2);
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  /* gray-200 */
+  color: #475569;
+  /* gray-700 */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+  /* gray-300 */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action {
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  /* Lighter background */
+}
+
+/* Custom scrollbar for table */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  /* Light gray track */
+  border-radius: 10px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  /* Medium gray thumb */
+  border-radius: 10px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+  /* Darker gray on hover */
+}
+
+/* Custom styles for card hover effect */
+.card-hover-effect {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Custom styles for status badges */
+.status-badge {
+  padding: 0.35rem 0.9rem;
+  /* Slightly larger padding */
+  border-radius: 9999px;
+  /* Full rounded */
+  font-weight: 600;
+  font-size: 0.75rem;
+  /* text-xs */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  /* Increased gap */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow */
+}
+
+.status-available {
+  background-color: #ecfdf5;
+  /* green-50 light */
+  color: #065f46;
+  /* green-800 */
+  border: 1px solid #34d399;
+  /* green-400 */
+}
+
+.status-sold-out {
+  background-color: #fffbeb;
+  /* yellow-50 light */
+  color: #b45309;
+  /* yellow-800 */
+  border: 1px solid #fcd34d;
+  /* yellow-300 */
+}
+
+.status-hot-selling {
+  background-color: #fee2e2;
+  /* red-50 light */
+  color: #dc2626;
+  /* red-600 */
+  border: 1px solid #fca5a5;
+  /* red-300 */
+}
+
+/* Custom button styles for better hover/active states */
+.btn-primary {
+  background-color: #10b981;
+  /* green-500 */
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  /* green-600 */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(5, 150, 105, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(16, 185, 129, 0.2);
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  /* gray-200 */
+  color: #475569;
+  /* gray-700 */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+  /* gray-300 */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action {
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
