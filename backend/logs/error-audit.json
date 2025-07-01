@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "C:\\adityaTekalePersonalData\\Programs\\web-development\\web-projects\\HomeBite\\backend\\logs\\error-audit.json",
+    "files": [
+        {
+            "date": 1751358804448,
+            "name": "C:\\adityaTekalePersonalData\\Programs\\web-development\\web-projects\\HomeBite\\backend\\logs\\error-2025-07-01.log",
+            "hash": "a9edda68ba82cea8f21ebcc91d13366484463e67a01bb792912814829589010b"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,144 @@
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:03:26.169'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:05:05.273'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:05:30.838'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:05:32.772'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:05:42.538'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:05:45.502'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:05:53.375'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:06:39.753'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:06:43.009'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:06:47.967'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:06:48.869'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:07:04.199'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:07:10.927'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:07:17.473'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:07:25.706'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:07:39.026'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:07:41.320'
+}
+{
+  message: 'Server is running on port 5000',
+  level: 'info',
+  service: 'homebite-api',
+  version: '1.0.0',
+  environment: 'development',
+  timestamp: '2025-07-01 14:08:04.835'
+}
