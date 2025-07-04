@@ -1,0 +1,18 @@
+# Environment variables
+.env
+.env.*
+.envx.key
+
+# Logs
+logs/
+*.log
+
+# Node modules
+node_modules/
+
+# Optional: IDE stuff
+.vscode/
+.DS_Store
+
+# Optional: Test coverage
+coverage/
