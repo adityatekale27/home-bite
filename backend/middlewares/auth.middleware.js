@@ -21,7 +21,7 @@ export const authenticate = async (req, res, next) => {
       return res.status(401).json({ message: "Account is deactivated" });
     }
 
-    req.user = user;
+    req.user = { ...user._doc };
     next();
   } catch (error) {
     res.status(401).json({ message: "Token is not valid" });

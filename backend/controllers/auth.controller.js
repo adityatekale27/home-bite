@@ -49,7 +49,7 @@ export const registerUser = async (req, res) => {
     } else if (role === "rider") {
       await RiderProfile.create({ userId: user._id });
     } else {
-      throw new Error("Failed to create role profile")
+      throw new Error("Failed to create role profile");
     }
 
     const token = generateToken(user._id);
@@ -113,13 +113,12 @@ export const loginUser = async (req, res) => {
 // Get User Profile
 export const getUserProfile = async (req, res) => {
   try {
-    console.log(req)
-    const user = await User.findById(req.user.userId);
+    const user = await User.findById(req.user._id);
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
     res.json({ user });
   } catch (error) {
-    res.status(500).json({ message: "Server error", error: error.message });
+    res.status(500).json({ message: "Server error:", error: error.message });
   }
 };

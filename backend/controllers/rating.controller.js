@@ -12,7 +12,7 @@ export const createRating = async (req, res) => {
       return res.status(404).json({ message: "Order not found" });
     }
 
-    if (order.customerId.toString() !== req.user.userId) {
+    if (order.customerId.toString() !== req.user._id) {
       return res.status(403).json({ message: "Access denied" });
     }
 
@@ -26,7 +26,7 @@ export const createRating = async (req, res) => {
 
     const rating = new Rating({
       orderId,
-      customerId: req.user.userId,
+      customerId: req.user._id,
       businessId: order.businessId,
       riderId: order.riderId,
       businessRating,

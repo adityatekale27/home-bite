@@ -27,7 +27,7 @@ export const createOrder = async (req, res) => {
     }
 
     const order = new Order({
-      customerId: req.user.userId,
+      customerId: req.user._id,
       businessId,
       mealItems: processedMealItems,
       deliveryAddress,
@@ -48,7 +48,7 @@ export const getCustomerOrders = async (req, res) => {
   try {
     const { status, page = 1, limit = 10 } = req.query;
 
-    const query = { customerId: req.user.userId };
+    const query = { customerId: req.user._id };
     if (status) query.status = status;
 
     const orders = await Order.find(query)
@@ -90,7 +90,7 @@ export const getOrderById = async (req, res) => {
     }
 
     // Check if user has access to this order
-    const userId = req.user.userId;
+    const userId = req.user._id;
     const userRole = req.user.role;
 
     if (userRole === "customer" && order.customerId._id.toString() !== userId) {
@@ -121,7 +121,7 @@ export const cancelOrder = async (req, res) => {
     }
 
     // Check if customer owns this order
-    if (order.customerId.toString() !== req.user.userId) {
+    if (order.customerId.toString() !== req.user._id) {
       return res.status(403).json({ message: "Access denied" });
     }
 

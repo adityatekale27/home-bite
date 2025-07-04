@@ -5,7 +5,7 @@ import BusinessProfile from "../models/businessProfile.model.js";
 // Get Customer Profile
 export const getCustomerProfile = async (req, res) => {
   try {
-    const profile = await CustomerProfile.findOne({ userId: req.user.userId });
+    const profile = await CustomerProfile.findOne({ userId: req.user._id });
     if (!profile) {
       return res.status(404).json({ message: "Customer profile not found" });
     }
@@ -18,7 +18,7 @@ export const getCustomerProfile = async (req, res) => {
 // Update Customer Profile
 export const updateCustomerProfile = async (req, res) => {
   try {
-    const profile = await CustomerProfile.findOneAndUpdate({ userId: req.user.userId }, req.body, { new: true, runValidators: true });
+    const profile = await CustomerProfile.findOneAndUpdate({ userId: req.user._id }, req.body, { new: true, runValidators: true });
     res.json({ message: "Profile updated successfully", profile });
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
@@ -30,7 +30,7 @@ export const addSavedAddress = async (req, res) => {
   try {
     const { label, location } = req.body;
 
-    const profile = await CustomerProfile.findOne({ userId: req.user.userId });
+    const profile = await CustomerProfile.findOne({ userId: req.user._id });
     if (!profile) {
       return res.status(404).json({ message: "Customer profile not found" });
     }

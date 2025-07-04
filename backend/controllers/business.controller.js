@@ -1,11 +1,12 @@
 import BusinessProfile from "../models/businessProfile.model.js";
+import Meal from "../models/meal.model.js";
 import Menu from "../models/menu.model.js";
 import Order from "../models/order.model.js";
 
 // Get Chef Profile
 export const getChefProfile = async (req, res) => {
   try {
-    const profile = await BusinessProfile.findOne({ userId: req.user.userId });
+    const profile = await BusinessProfile.findOne({ userId: req.user._id });
     if (!profile) {
       return res.status(404).json({ message: "Chef profile not found" });
     }
@@ -18,7 +19,7 @@ export const getChefProfile = async (req, res) => {
 // Update Chef Profile
 export const updateChefProfile = async (req, res) => {
   try {
-    const profile = await BusinessProfile.findOneAndUpdate({ userId: req.user.userId }, req.body, { new: true, runValidators: true });
+    const profile = await BusinessProfile.findOneAndUpdate({ userId: req.user._id }, req.body, { new: true, runValidators: true });
     res.json({ message: "Profile updated successfully", profile });
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
@@ -30,7 +31,7 @@ export const createDailyMenu = async (req, res) => {
   try {
     const { date, title, description } = req.body;
 
-    const chefProfile = await BusinessProfile.findOne({ userId: req.user.userId });
+    const chefProfile = await BusinessProfile.findOne({ userId: req.user._id });
     if (!chefProfile) {
       return res.status(404).json({ message: "Chef profile not found" });
     }
@@ -58,7 +59,7 @@ export const addMealToMenu = async (req, res) => {
     const { menuId } = req.params;
     const { name, description, price, image, dietaryTags } = req.body;
 
-    const chefProfile = await BusinessProfile.findOne({ userId: req.user.userId });
+    const chefProfile = await BusinessProfile.findOne({ userId: req.user._id });
     if (!chefProfile) {
       return res.status(404).json({ message: "Chef profile not found" });
     }
@@ -92,7 +93,7 @@ export const addMealToMenu = async (req, res) => {
 // Get Chef's Menus
 export const getChefMenus = async (req, res) => {
   try {
-    const chefProfile = await BusinessProfile.findOne({ userId: req.user.userId });
+    const chefProfile = await BusinessProfile.findOne({ userId: req.user._id });
     if (!chefProfile) {
       return res.status(404).json({ message: "Chef profile not found" });
     }
@@ -110,7 +111,7 @@ export const publishMenu = async (req, res) => {
   try {
     const { menuId } = req.params;
 
-    const chefProfile = await BusinessProfile.findOne({ userId: req.user.userId });
+    const chefProfile = await BusinessProfile.findOne({ userId: req.user._id });
     if (!chefProfile) {
       return res.status(404).json({ message: "Chef profile not found" });
     }
@@ -132,7 +133,7 @@ export const getChefOrders = async (req, res) => {
   try {
     const { status, page = 1, limit = 10 } = req.query;
 
-    const chefProfile = await BusinessProfile.findOne({ userId: req.user.userId });
+    const chefProfile = await BusinessProfile.findOne({ userId: req.user._id });
     if (!chefProfile) {
       return res.status(404).json({ message: "Chef profile not found" });
     }
@@ -169,7 +170,7 @@ export const updateOrderStatus = async (req, res) => {
     const { orderId } = req.params;
     const { status } = req.body;
 
-    const chefProfile = await BusinessProfile.findOne({ userId: req.user.userId });
+    const chefProfile = await BusinessProfile.findOne({ userId: req.user._id });
     if (!chefProfile) {
       return res.status(404).json({ message: "Chef profile not found" });
     }
